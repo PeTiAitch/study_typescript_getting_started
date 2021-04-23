@@ -1,3 +1,11 @@
+var Player = (function () {
+    function Player() {
+    }
+    Player.prototype.formatName = function () {
+        return this.name.toUpperCase();
+    };
+    return Player;
+}());
 function startGame() {
     var playerName = getInputValue('playername');
     logPlayer(playerName);
@@ -35,14 +43,7 @@ var logMessage = function (message) { return console.log("Message: " + message);
 function logError(err) {
     console.error("Error: " + err);
 }
-var myResult = {
-    playerName: 'Marie',
-    score: 5,
-    problemCount: 5,
-    factor: 7
-};
-var player = {
-    name: 'Daniel',
-    formatName: function () { return 'Dan'; }
-};
+var firstPlayer = new Player();
+firstPlayer.name = 'Lanier';
+console.log(firstPlayer.formatName());
 //# sourceMappingURL=app.js.map
